@@ -1,27 +1,29 @@
 window.addEventListener('load', start);
+
+
 function start() {
-  inputValueRed.value = myRangeRed.value;
-  myRangeRed.oninput = function () {
-    inputValueRed.value = this.value;
-    carregaColor();
-  };
-  inputValueGreen.value = myRangeGreen.value;
-  myRangeGreen.oninput = function () {
-    inputValueGreen.value = this.value;
-    carregaColor();
-  };
-  inputValueBlue.value = myRangeBlue.value;
-  myRangeBlue.oninput = function () {
-    inputValueBlue.value = this.value;
-    carregaColor();
-  };
-}
 
-function carregaColor() {
-  var quadrado = document.querySelector('.quadrado');
-  var red = document.querySelector('#myRangeRed').value;
-  var green = document.querySelector('#inputValueGreen').value;
-  var blue = document.querySelector('#myRangeBlue').value;
+  var resultColor = document.querySelector('.quadrado');
+  var inputRed = document.querySelector('#inputValueRed');
+  var inputGreen = document.querySelector('#inputValueGreen');
+  var inputBlue = document.querySelector('#inputValueBlue');
 
-  quadrado.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+
+  addEventListener('input', handleInputRange);
+
+
+  function handleInputRange() {
+    var red = document.querySelector('#myRangeRed').value;
+    var green = document.querySelector('#myRangeGreen').value;
+    var blue = document.querySelector('#myRangeBlue').value;
+
+
+    inputRed.value = red;
+    inputGreen.value = green;
+    inputBlue.value = blue;
+
+    resultColor.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+
+
+  }
 }

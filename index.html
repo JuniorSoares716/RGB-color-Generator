@@ -1,82 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Desafio 1 - Simuladores de Cores</title>
-  </head>
-  <body>
-    <!-- ignore outline -->
-    <div class="container">
-      <div class="title">Gerador de Cores RGB</div>
-      <div class="container-caixa">
-        <div class="conteudo">
-          <span class="label" id="nameRed">(R) Vermelho:</span>
-          <span class="label" id="nameGreen">(G) Green:</span>
-          <span class="label" id="nameBlue">(B) Azul:</span>
-        </div>
-        <div class="conteudo-range">
-          <input
-            class="range-width"
-            type="range"
-            name="red"
-            id="myRangeRed"
-            value="0"
-            min="0"
-            max="255"
-          />
-          <input
-            class="range-width"
-            type="range"
-            name="green"
-            id="myRangeGreen"
-            value="0"
-            min="0"
-            max="255"
-          />
-          <input
-            class="range-width"
-            type="range"
-            name="blue"
-            id="myRangeBlue"
-            value="0"
-            min="0"
-            max="255"
-          />
-        </div>
-        <div class="conteudo-input">
-          <input
-            class="inputText"
-            type="text"
-            name="inputValueRed"
-            value="0"
-            id="inputValueRed"
-            disabled
-          />
-          <input
-            class="inputText"
-            type="text"
-            name="inputValueGreen"
-            value="0"
-            id="inputValueGreen"
-            disabled
-          />
-          <input
-            class="inputText"
-            type="text"
-            name="inputValueBlue"
-            value="0"
-            id="inputValueBlue"
-            disabled
-          />
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Desafio 1 - Simuladores de Cores</title>
+</head>
+
+<body>
+  <!-- ignore outline -->
+  <div class="container">
+    <div class="title">Gerador de Cores RGB</div>
+    <div class="container-caixa">
+      <div class="conteudo">
+        <span class="label" id="nameRed">(R) Vermelho:</span>
+        <span class="label" id="nameGreen">(G) Green:</span>
+        <span class="label" id="nameBlue">(B) Azul:</span>
       </div>
-      <div class="footer">
-        <div class="quadrado"></div>
+      <div class="conteudo-range">
+        <input class="range-width" type="range" name="red" id="myRangeRed" value="0" min="0" max="255" />
+        <input class="range-width" type="range" name="green" id="myRangeGreen" value="0" min="0" max="255" />
+        <input class="range-width" type="range" name="blue" id="myRangeBlue" value="0" min="0" max="255" />
+      </div>
+      <div class="conteudo-input">
+        <input class="inputText" type="text" name="inputValueRed" value="0" id="inputValueRed" readonly value="0" />
+        <input class="inputText" type="text" name="inputValueGreen" value="0" id="inputValueGreen" readonly value="0" />
+        <input class="inputText" type="text" name="inputValueBlue" value="0" id="inputValueBlue" readonly value="0" />
       </div>
     </div>
-    <script src="styles.js"></script>
-  </body>
+    <div class="footer">
+      <div class="quadrado"></div>
+    </div>
+  </div>
+  <script src="styles.js"></script>
+</body>
+
 </html>
